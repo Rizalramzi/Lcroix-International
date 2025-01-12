@@ -1,0 +1,42 @@
+
+body::-webkit-scrollbar {
+    display: none;  /* Menyembunyikan scrollbar pada browser berbasis WebKit */
+  }
+/* Kontainer slider */
+.slider {
+    display: flex;
+    width: 100vw; 
+    height: 100vh;  /* Menyusun slider agar menutupi layar penuh */
+    transition: transform 1s ease-in-out;  /* Transisi halus untuk perpindahan */
+    margin: 0;
+    padding: 0;
+    z-index: 10;
+}
+
+.slide {
+    flex:1 0 100vw;  /* Setiap slide mengisi 100% dari lebar kontainer */
+    height: 100%;  /* Setiap slide mengambil seluruh tinggi layar */
+    display: flex;
+    align-items: center; /* Untuk menyelaraskan isi slide secara vertikal */
+    justify-content: center; /* Menempatkan konten di tengah */
+    background-size: cover; /* Gambar diubah untuk tetap terlihat sepenuhnya dan menyesuaikan kontainer */
+    background-position: center; /* Menjaga posisi gambar tetap pada tengah */
+    background-repeat: no-repeat; /* Tidak mengulang gambar */
+}
+
+/* Slide 1, 2, 3 */
+#slide1 {
+    background-image: url('../assets/slide1.png');
+}
+#slide2 {
+    background-image: url('../assets/slide2.png');
+}
+#slide3 {
+    background-image: url('../assets/slide3.png');
+}
+
+#client{
+    background-image: url('../assets/client/bg-client.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
