@@ -3,10 +3,10 @@ window.addEventListener("scroll", function () {
   const logo = document.getElementById("logo");
 
   if (window.scrollY > 0) {
-    navbar.classList.add("bg-white", "text-dark");
+    navbar.classList.add("bg-white", "text-dark", "shadow-xl");
     logo.src = "assets/logo-dark.png";
   } else {
-    navbar.classList.remove("bg-white", "text-dark");
+    navbar.classList.remove("bg-white", "text-dark", "shadow-xl");
     logo.src = "assets/logo.png";
   }
 });

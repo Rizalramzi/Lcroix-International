@@ -39,3 +39,11 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#service{
+  background-image: url("../assets/services/bg-service.png");
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
