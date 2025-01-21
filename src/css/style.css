@@ -47,3 +47,11 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#sustainability{
+  background-image: url("../assets/sustainability/bg-sustainability.png");
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
