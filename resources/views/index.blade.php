@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Lcroix International</title>
+    <link rel="stylesheet" href="{{ asset("/css/style.css") }}" />
+    <link rel="stylesheet" href="{{ asset("/css/font.css") }}" />
+    <script src="{{ asset("/js/navbar.js") }}"></script>
+    @vite('resources/css/app.css')
+  </head>
+  <body class="relative w-full text-white">
+    <nav
+      id="navbar"
+      class="fixed top-0 z-50 flex w-full items-center justify-between px-24 py-6 transition-colors duration-300 ease-in-out"
+    >
+      <div class="">
+        <img id="logo" src="{{ asset('assets/logo.png') }}" alt="Logo" class="h-auto w-40" />
+      </div>
+      <div>
+        <ul class="flex items-center space-x-8 text-sm">
+          <li><a href="{{ url('/') }}">Home</a></li>
+          <li><a href="{{ url("#") }}">About Us</a></li>
+          <li><a href="{{ url('sustainability') }}">Sustainability and Social Responsibilities</a></li>
+          <li><a href="{{ url('collaboration') }}">Collaboration</a></li>
+          <li><a href="{{ url('contact') }}">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section
+      id="hero"
+      class="hero relative z-30 flex h-screen w-screen items-center justify-center overflow-hidden text-white"
+    >
+      <!-- Button Slider -->
+      <div class="absolute z-50 flex w-full items-center justify-between">
+        <div
+          class="flex cursor-pointer items-center justify-center bg-black px-4 py-8 opacity-50"
+          onclick="changeSlide(currentIndex - 1)"
+        >
+          <img src="{{ asset("/assets/icons/arrow.svg") }}" alt="" class="h-auto w-4" />
+        </div>
+        <div
+          class="flex cursor-pointer items-center justify-center bg-black px-4 py-8 opacity-50"
+          onclick="changeSlide(currentIndex + 1)"
+        >
+          <img
+            src="{{ asset("/assets/icons/arrow.svg") }}"
+            alt=""
+            class="h-auto w-4 rotate-180"
+          />
+        </div>
+      </div>
+
+      <div class="absolute z-20 flex w-full items-center justify-center pt-10">
+        <div class="w-3/4">
+          <div class="ps-24 pt-16">
+            <h1 class="max-w-[80%] text-[3rem] leading-[4rem] tracking-wider">
+              L'ile Croix International Hospitality
+            </h1>
+            <p class="text-md pt-6">
+              Hotel Operation and Management Service Company
+            </p>
+          </div>
+          <div
+            class="mt-16 flex h-12 w-72 items-center justify-center bg-gradient-to-r from-main to-transparent"
+          >
+            <p class="ps-24 text-sm">©lcroixinternational.com</p>
+          </div>
+        </div>
+        <div class="flex w-1/4 flex-col items-center justify-center">
+          <div class="w-fit rotate-[-90deg] pb-32 ps-20">
+            <h1 class="text-2xl tracking-wider opacity-70">Sustainabile</h1>
+            <div class="flex items-center space-x-4">
+              <h1 class="ps-32 text-2xl tracking-wider opacity-70">
+                Hospitality
+              </h1>
+              <div class="h-[0.1rem] w-14 bg-white opacity-70"></div>
+            </div>
+          </div>
+          <div
+            id="indicator"
+            class="absolute bottom-0 right-52 flex transform space-x-2"
+          >
+            <div
+              class="indicator-item h-2 w-2 cursor-pointer rounded-full bg-white opacity-50"
+            ></div>
+            <div
+              class="indicator-item h-2 w-2 cursor-pointer rounded-full bg-white opacity-50"
+            ></div>
+            <div
+              class="indicator-item h-2 w-2 cursor-pointer rounded-full bg-white opacity-50"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider" id="slider">
+        <!-- Slide 1 -->
+        <div class="slide brightness-[.65]" id="slide1"></div>
+        <!-- Slide 2 -->
+        <div class="slide brightness-[.65]" id="slide2"></div>
+        <!-- Slide 3 -->
+        <div class="slide brightness-[.65]" id="slide3"></div>
+      </div>
+    </section>
+
+    <main class="mt-32 flex w-full flex-col justify-center">
+      <div class="container mx-auto max-w-[90rem]">
+        <!-- About -->
+        <section id="about">
+          <div class="flex items-center justify-between">
+            <div class="w-2/3 ps-24">
+              <div class="flex items-center space-x-6">
+                <h1 class="text-2xl text-main">Who We Are ?</h1>
+                <div class="h-[0.1rem] w-20 bg-main"></div>
+              </div>
+              <p class="mt-4 max-w-[38rem] text-[0.8rem] text-dark">
+                Welcome to the essence of L’ile Croix International Hospitality.
+                Unveil our commitment, expertise, and passion for delivering
+                unparalleled hospitality experiences.
+              </p>
+            </div>
+            <div class="flex w-1/3 flex-col items-end justify-center">
+              <div class="h-16 w-64 bg-main"></div>
+              <div class="h-16 w-48 bg-gray"></div>
+            </div>
+          </div>
+          <div class="mt-32 flex items-center justify-between px-48">
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+            <div class="flex flex-col items-center justify-center space-y-6">
+              <img src="{{ asset("/assets/logo-second.png") }}" alt="" class="h-auto w-16" />
+              <h1
+                class="max-w-[80%] text-center text-3xl tracking-wider text-main"
+              >
+                L'ile Croix International Hospitality
+              </h1>
+              <p class="text-[0.8rem] text-dark">
+                A Hotel Operation and Management Service Company
+              </p>
+              <p class="max-w-[30rem] text-center text-[0.8rem] text-dark">
+                L’ILE CROIX INTERNATIONAL HOSPITALITY (LCH) is a brand of Hotel
+                Operation and Management Service (HOMS) based in the U.S.A.
+                under leaderships with extensive experiences in hospitality
+                business, education and training, and in technical areas
+                involving sustainability, community development and
+                international engagements.
+              </p>
+              <button class="bg-main px-10 py-4 text-[0.8rem] text-white">
+                View Our Offer
+              </button>
+            </div>
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+          </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Offer -->
+        <section id="offer" class="relative mt-60">
+          <div class="z-20 px-24">
+            <div class="flex items-center space-x-6">
+              <h1 class="text-2xl text-white">Service We Offer</h1>
+              <div class="h-[0.1rem] w-20 bg-white"></div>
+            </div>
+            <div class="mt-8 grid grid-cols-4 gap-1 text-dark">
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex h-80 w-80 flex-col items-center bg-white px-6 pt-6"
+                >
+                  <div class="space-y-3">
+                    <img
+                      src="{{ asset("/assets/offers/offer1.png") }}"
+                      alt=""
+                      class="h-auto w-80"
+                    />
+                    <p class="text-md font-medium">© Feasibility Study</p>
+                    <p class="text-[0.8rem]">
+                      Conducting a thorough analysis to assess the viability and
+                      potential success of your hospitality venture.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex h-80 w-80 flex-col items-center bg-white px-6 pt-6"
+                >
+                  <div class="space-y-3">
+                    <img
+                      src="{{ asset("/assets/offers/offer2.png") }}"
+                      alt=""
+                      class="h-auto w-80"
+                    />
+                    <p class="text-md font-medium">
+                      © Hotel Planning & Design
+                    </p>
+                    <p class="text-[0.8rem]">
+                      Crafting a unique and tailored plan for your hotel,
+                      encompassing design concepts that align with your brand
+                      identity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex h-80 w-80 flex-col items-center bg-white px-6 pt-6"
+                >
+                  <div class="space-y-3">
+                    <img
+                      src="{{ asset("/assets/offers/offer3.png") }}"
+                      alt=""
+                      class="h-auto w-80"
+                    />
+                    <p class="text-md font-medium">© Pre-Opening Services</p>
+                    <p class="text-[0.8rem]">
+                      We assist in coordinating pre-opening activities, ensuring
+                      a smooth transition from planning to operational
+                      readiness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div
+                  class="flex h-80 w-80 flex-col items-center bg-white px-6 pt-6"
+                >
+                  <div class="space-y-3">
+                    <img
+                      src="{{ asset("/assets/offers/offer4.png") }}"
+                      alt=""
+                      class="h-auto w-80"
+                    />
+                    <p class="text-md font-medium">© Hotel Management</p>
+                    <p class="text-[0.8rem]">
+                      Comprehensive management services, leveraging industry
+                      expertise to optimize performance and guest satisfaction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="absolute top-[-3rem] z-[-1] h-[30rem] w-[50rem] bg-main"
+          ></div>
+          <img
+            src="{{ asset("/assets/offers/bg-offer.png") }}"
+            alt=""
+            class="absolute right-0 top-[-6.5rem] z-[-2] h-[32rem] w-[60rem] object-cover"
+          />
+        </section>
+        <!-- End Offer -->
+
+        <!-- Details -->
+        <section id="detail" class="relative mt-60">
+          <div class="flex flex-row justify-between ps-24">
+            <div class="space-y-4 pt-16">
+              <h1
+                class="max-w-80 text-2xl leading-relaxed tracking-wider text-main"
+              >
+                L'ile Croix Convention Hotel and Resort
+              </h1>
+              <p class="text-[0.8rem] text-dark">
+                The first Sustainable Green MICE Hotel & Resort in St. Croix
+              </p>
+              <button class="bg-main px-10 py-4 text-[0.8rem] text-white">
+                Read More
+              </button>
+            </div>
+            <div class="relative flex flex-col items-end">
+              <img
+                src="{{ asset("/assets/detail/detail1.png") }}"
+                alt=""
+                class="h-auto w-[35rem]"
+              />
+              <div class="mt-2 grid grid-cols-4 gap-2">
+                <div>
+                  <img
+                    src="{{ asset("/assets/detail/detail1.png") }}"
+                    alt=""
+                    class="h-32 w-44"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="{{ asset("/assets/detail/detail1.png") }}"
+                    alt=""
+                    class="h-32 w-44"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="{{ asset("/assets/detail/detail1.png") }}"
+                    alt=""
+                    class="h-32 w-44"
+                  />
+                </div>
+                <div>
+                  <img
+                    src="{{ asset("/assets/detail/detail1.png") }}"
+                    alt=""
+                    class="h-32 w-44"
+                  />
+                </div>
+              </div>
+              <div
+                class="absolute left-0 top-[18.7rem] flex h-36 w-72 flex-col items-start justify-center space-y-3 bg-main px-6"
+              >
+                <h1
+                  class="max-w-80 text-2xl leading-relaxed tracking-wider text-white"
+                >
+                  More Details
+                </h1>
+                <button
+                  class="border border-white px-8 py-3 text-[0.8rem] text-white"
+                >
+                  Click Here
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Details -->
+
+        <!-- Sustainability -->
+        <section id="" class="mt-32">
+          <div class="flex items-center justify-between px-48">
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+            <div class="space-y-2 text-center">
+              <h1 class="text-xl leading-relaxed tracking-wider text-main">
+                Commitment to
+              </h1>
+              <h1 class="text-2xl leading-relaxed tracking-wider text-main">
+                Sustainability & Global Development
+              </h1>
+              <p class="text-[0.8rem] text-dark">
+                © L’ile Croix International Hospitality
+              </p>
+            </div>
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+          </div>
+          <div class="relative mt-32 flex ps-24">
+            <div class="w-4/12 space-y-3 pt-14">
+              <h1 class="text-2xl leading-relaxed tracking-wider text-white">
+                Sustainability
+              </h1>
+              <h1 class="text-xl leading-relaxed tracking-wider text-white">
+                & Social Responsibilities
+              </h1>
+              <p class="text-[0.8rem] text-white">
+                © L’ile Croix International Hospitality
+              </p>
+            </div>
+            <div class="w-8/12">
+              <div
+                class="flex h-[25rem] w-full items-center space-x-6 bg-gray p-6"
+              >
+                <img
+                  src="{{ asset("/assets/sustainability/sustainability1.png") }}"
+                  alt=""
+                  class="h-full w-64 object-cover"
+                />
+                <div class="space-y-6">
+                  <p class="max-w-80 text-[0.8rem] text-dark">
+                    With a motto “Providing Sustainable Hospitality to Connect
+                    People”, as a hospitality provider we aims that the hotels
+                    we serve will be good stewards to earth environment by
+                    minimizing their carbon footprints and waste through
+                    circularity a range of energy, water, and waste measures.
+                  </p>
+                  <button
+                    class="border border-main px-8 py-3 text-[0.8rem] text-main"
+                  >
+                    Click Here
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="absolute left-0 top-[-1rem] z-[-1] h-[27rem] w-[40rem] bg-main"
+            ></div>
+          </div>
+        </section>
+        <!-- End Sustainability -->
+
+        <!-- Partner -->
+        <section class="mt-32 flex flex-col items-center px-24">
+          <div class="flex w-full items-center justify-between px-48">
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+            <h1 class="text-2xl leading-relaxed tracking-wider text-main">
+              Why Partnering With Us ?
+            </h1>
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+          </div>
+          <div class="mt-16 grid grid-cols-4 gap-2">
+            <div class="flex h-56 w-60 items-center bg-gray p-8">
+              <div class="space-y-6">
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-main"
+                >
+                  <img src="{{ asset("/assets/icons/plus.svg") }}" alt="" class="h-auto w-4" />
+                </div>
+                <p class="min-h-20 text-[0.8rem] text-dark">
+                  Extensive proven experience in hospitality business,
+                  specifically on MICE operation and management
+                </p>
+              </div>
+            </div>
+            <div class="flex h-56 w-60 items-center bg-gray p-8">
+              <div class="space-y-6">
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-main"
+                >
+                  <img
+                    src="{{ asset("/assets/icons/wallet.svg") }}"
+                    alt=""
+                    class="h-auto w-4"
+                  />
+                </div>
+                <p class="min-h-20 text-[0.8rem] text-dark">
+                  Increase potential cash flow profit by lower management and
+                  operator costs
+                </p>
+              </div>
+            </div>
+            <div class="flex h-56 w-60 items-center bg-gray p-8">
+              <div class="space-y-6">
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-main"
+                >
+                  <img src="{{ asset("/assets/icons/book.svg") }}" alt="" class="h-auto w-4" />
+                </div>
+                <p class="min-h-20 text-[0.8rem] text-dark">
+                  In-house education and training for acquiring high quality
+                  hospitality services
+                </p>
+              </div>
+            </div>
+            <div class="flex h-56 w-60 items-center bg-gray p-8">
+              <div class="space-y-6">
+                <div
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-main"
+                >
+                  <img src="{{ asset("/assets/icons/globe.svg") }}" alt="" class="h-auto w-4" />
+                </div>
+                <p class="text-[0.8rem] text-dark">
+                  Expertise to support meaningful sustainability, community
+                  development and global engagement
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Partner -->
+
+        <!-- Banner Clients -->
+        <section
+          id="client"
+          class="mt-32 flex h-[30rem] w-full flex-col items-center justify-center space-y-8"
+        >
+          <h1
+            class="max-w-[40rem] text-center text-3xl leading-relaxed tracking-wider text-white"
+          >
+            Decades of Experience in Hospitality Business and Education
+          </h1>
+          <div class="flex space-x-1">
+            <img
+              src="{{ asset("/assets/client/salakhospitality.png") }}"
+              alt=""
+              class="h-auto w-32"
+            />
+            <img
+              src="{{ asset("/assets/client/sekolahtinggipwstbogor.png") }}"
+              alt=""
+              class="h-auto w-32"
+            />
+          </div>
+          <p class="text-[0.8rem] text-white">
+            Let’s join us in shaping sustainable hospitality
+          </p>
+          <button
+            class="border border-white px-8 py-3 text-[0.8rem] text-white"
+          >
+            View Our Clients
+          </button>
+        </section>
+        <!-- End Banner Clients -->
+
+        <!-- Post -->
+        <section class="mt-32 flex flex-col items-center justify-center px-24">
+          <div class="flex w-full items-center justify-between px-48">
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+            <div class="space-y-3 text-center">
+              <h1 class="text-2xl leading-relaxed tracking-wider text-main">
+                Latest Post
+              </h1>
+              <p class="text-[0.8rem] text-main">
+                © L’ile Croix International Hospitality
+              </p>
+            </div>
+            <div class="h-[0.1rem] w-20 bg-main"></div>
+          </div>
+          <div class="mt-16 grid grid-cols-4 gap-2">
+            <div class="flex h-80 w-60 items-center justify-center bg-main p-6">
+              <div class="flex flex-col items-center justify-center space-y-5">
+                <img src="{{ asset("/assets/post/post1.png") }}" alt="" />
+                <p class="min-h-16 text-center text-sm font-medium">
+                  Crafting Exceptional Hotel Experiences Together
+                </p>
+                <button
+                  class="border border-white px-8 py-3 text-[0.8rem] text-white"
+                >
+                  Read Here
+                </button>
+              </div>
+            </div>
+            <div class="flex h-80 w-60 items-center justify-center bg-main p-6">
+              <div class="flex flex-col items-center justify-center space-y-5">
+                <img src="{{ asset("/assets/post/post2.png") }}" alt="" />
+                <p class="min-h-16 text-center text-sm font-medium">
+                  Strategic Hospitality Solutions for Business Growth
+                </p>
+                <button
+                  class="border border-white px-8 py-3 text-[0.8rem] text-white"
+                >
+                  Read Here
+                </button>
+              </div>
+            </div>
+            <div class="flex h-80 w-60 items-center justify-center bg-main p-6">
+              <div class="flex flex-col items-center justify-center space-y-5">
+                <img src="{{ asset("/assets/post/post3.png") }}" alt="" />
+                <p class="min-h-16 text-center text-sm font-medium">
+                  Connecting People Through Sustainable Hospitality
+                </p>
+                <button
+                  class="border border-white px-8 py-3 text-[0.8rem] text-white"
+                >
+                  Read Here
+                </button>
+              </div>
+            </div>
+            <div class="flex h-80 w-60 items-center justify-center bg-main p-6">
+              <div class="flex flex-col items-center justify-center space-y-5">
+                <img src="{{ asset("/assets/post/post4.png") }}" alt="" />
+                <p class="min-h-16 text-center text-sm font-medium">
+                  Transforming Ideas into Exceptional Hotels
+                </p>
+                <button
+                  class="border border-white px-8 py-3 text-[0.8rem] text-white"
+                >
+                  Read Here
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Post -->
+      </div>
+    </main>
+
+    <footer class="mt-32 w-full bg-main px-24 py-20">
+      <div class="flex w-full">
+        <div class="w-2/6 space-y-3">
+          <h1 class="text-2xl text-white">
+            L'ile Croix International Hospitality
+          </h1>
+          <p class="text-[0.7rem]">
+            ©2025 All Rights Reserved. Published by www.eda.co.id
+          </p>
+          <div class="flex items-center space-x-2">
+            <img src="{{ asset("/assets/icons/linkedin.svg") }}" alt="" class="h-6 w-auto" />
+            <img src="{{ asset("/assets/icons/email.svg") }}" alt="" class="h-6 w-auto" />
+            <img src="{{ asset("/assets/icons/instagram.svg") }}" alt="" class="h-6 w-auto" />
+          </div>
+        </div>
+        <div class="flex w-4/6 justify-end text-white">
+          <div class="grid grid-cols-3">
+            <div class="flex justify-center">
+              <ul class="space-y-3 text-[0.8rem]">
+                <li class="font-semibold"><a href="{{ url("") }}">Links</a></li>
+                <li class=""><a href="{{ url("") }}">Home</a></li>
+                <li class=""><a href="{{ url("") }}">About Us</a></li>
+                <li class=""><a href="{{ url("") }}">Our Services</a></li>
+                <li class=""><a href="{{ url("") }}">Our Projects</a></li>
+                <li class=""><a href="{{ url("") }}">Collaboration</a></li>
+              </ul>
+            </div>
+            <div class="">
+              <ul class="space-y-3 text-[0.8rem]">
+                <li class="font-semibold"><a href="{{ url("") }}">Address</a></li>
+                <li class="max-w-40">
+                  <a href="{{ url("") }}">4305 Ammons Street Wheat Ridge, CO 83003</a>
+                </li>
+              </ul>
+            </div>
+            <div class="flex justify-center">
+              <ul class="space-y-3 text-[0.8rem]">
+                <li class="font-semibold"><a href="{{ url("") }}">Contact Us</a></li>
+                <li class="max-w-52">
+                  <a href="{{ url("") }}"
+                    >For further information, please contact us via the
+                    following</a
+                  >
+                </li>
+                <li>
+                  <div class="flex items-center space-x-2">
+                    <img
+                      src="{{ asset("/assets/icons/phone.svg") }}"
+                      alt=""
+                      class="h-6 w-auto"
+                    />
+                    <p class="text-[0.8rem]">+1(515)240-3086</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="flex items-center space-x-2">
+                    <img
+                      src="{{ asset("/assets/icons/whatsapp.svg") }}"
+                      alt=""
+                      class="h-6 w-auto"
+                    />
+                    <p class="text-[0.8rem]">+1(515)240-3086</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      let currentIndex = 0; // Indeks slide saat ini
+      const slides = document.querySelectorAll("#slider > div");
+      const indicators = document.querySelectorAll(".indicator-item");
+      const slideCount = slides.length;
+
+      function updateSlider() {
+        // Perbarui transformasi slider
+        const slider = document.getElementById("slider");
+        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+        // Perbarui kelas untuk indikator
+        indicators.forEach((indicator, index) => {
+          if (index === currentIndex) {
+            // Indikator aktif (background putih)
+            indicator.classList.add("bg-white"); // Background putih untuk yang aktif
+            indicator.classList.remove("opacity-50"); // Hapus opacity untuk yang aktif
+            indicator.classList.add("opacity-100"); // Set opacity penuh untuk yang aktif
+            indicator.classList.remove("border-white"); // Hapus border putih jika ada (jika diperlukan)
+          } else {
+            // Indikator non-aktif (border putih)
+            indicator.classList.add("border-2"); // Tambahkan border jika perlu
+            indicator.classList.add("border-white"); // Border putih untuk yang non-aktif
+            indicator.classList.remove("bg-white"); // Hapus background untuk yang non-aktif
+            indicator.classList.add("opacity-50"); // Atur opacity rendah untuk yang non-aktif
+            indicator.classList.remove("opacity-100"); // Hapus opacity penuh untuk yang non-aktif
+          }
+        });
+      }
+
+      function changeSlide(index) {
+        if (index < 0) {
+          currentIndex = slideCount - 1; // Kembali ke slide terakhir
+        } else if (index >= slideCount) {
+          currentIndex = 0; // Kembali ke slide pertama
+        } else {
+          currentIndex = index; // Set slide index sesuai tombol diklik
+        }
+
+        updateSlider();
+        clearInterval(slideInterval); // Hentikan interval saat interaksi manual
+        startSlideInterval(); // Mulai kembali interval slide otomatis
+      }
+
+      function startSlideInterval() {
+        slideInterval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % slideCount; // Ganti slide setiap 11 detik
+          updateSlider();
+        }, 4000); // Ganti slide setiap 4 detik (waktu diam 2 detik + transisi 2 detik)
+      }
+
+      // Event listener pada setiap indikator untuk klik manual
+      indicators.forEach((indicator, index) => {
+        indicator.addEventListener("click", () => {
+          currentIndex = index; // Tentukan index berdasarkan klik
+          updateSlider();
+        });
+      });
+
+      // Mulai interval slide otomatis saat halaman dimuat
+      window.onload = () => {
+        startSlideInterval();
+        updateSlider(); // Inisialisasi dengan kondisi awal
+      };
+    </script>
+  </body>
+</html>
