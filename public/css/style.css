@@ -63,3 +63,15 @@ body::-webkit-scrollbar {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.rm-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .rm-scroll {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
