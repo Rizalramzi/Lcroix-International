@@ -64,6 +64,30 @@ body::-webkit-scrollbar {
   background-size: cover;
 }
 
+#profile, #leader, #project{
+  background-image: url("../assets/bg-profile.png");
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#contact{
+  background-image: url("../assets/bg-contact.png");
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#article{
+  background-image: url("../assets/post/bg-article.png");
+  width: 100vw;
+  height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .rm-scroll::-webkit-scrollbar {

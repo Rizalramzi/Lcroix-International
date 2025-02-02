@@ -7,6 +7,7 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > 0) {
     navbar.classList.add("bg-white", "text-dark", "shadow-xl");
+    navbar.classList.remove("text-white");
     logo.src = "assets/logo-dark.png";
     menu.src = "assets/icons/menu-dark.svg";
     dropdownIcon.src = "assets/icons/dropdown-dark.svg";
@@ -14,6 +15,7 @@ window.addEventListener("scroll", function () {
     dropdown.classList.remove('bg-main')
   } else {
     navbar.classList.remove("bg-white", "text-dark", "shadow-xl");
+    navbar.classList.add("text-white");
     logo.src = "assets/logo.png";
     menu.src = "assets/icons/menu.svg";
     dropdownIcon.src = "assets/icons/dropdown.svg";
