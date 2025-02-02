@@ -76,7 +76,7 @@
 
             <section class="mt-24">
                 <div class="w-full flex flex-col-reverse md:flex-row relative items-center">
-                    <div class="bg-main md:w-7/12 w-full md:h-[30rem] h-[35rem] flex flex-col justify-center items-center md:items-start text-center md:text-start text-white md:ps-20">
+                    <div class="bg-main md:w-7/12 w-full h-[35rem] flex flex-col justify-center items-center md:items-start text-center md:text-start text-white md:ps-20">
                         <div class="space-y-6 max-w-[28rem] px-12">
                             <h1 class="tracking-wider md:text-3xl text-xl">L'ile Croix Green Convention Hotel & Resort</h1>
                             <div class="space-y-4 text-xs leading-relaxed">
@@ -189,7 +189,7 @@
                             <p>US Virgin Islands Hotel & Tourism Association <a href="https://usvihta.com/" target="_blank" class="font-semibold">https://usvihta.com/</a></p>
                         </li>
                         <li class="">
-                            <p class="">The University of Virgin Islands – Hospitality and Tourism Management  Program <a href=" https://omni.uvi.edu/academics/school-business/programs/professional-studies/hotel-tourism-mgmt/" target="_blank" class="font-semibold"> https://omni.uvi.edu/academics/</a></p>
+                            <p class="">The University of Virgin Islands – Hospitality and Tourism Management  Program <a href="https://omni.uvi.edu/academics/school-business/programs/professional-studies/hotel-tourism-mgmt/" target="_blank" class="font-semibold"> https://omni.uvi.edu/academics/</a></p>
                         </li>
                         <li>
                             <p>The University of Virgin Islands – Research and Technology Park <a href="https://uvirtpark.net/" target="_blank" class="font-semibold">https://uvirtpark.net/</a></p>
