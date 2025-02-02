@@ -17,3 +17,23 @@ Route::get('/service', action: function () {
 Route::get('/collaboration', action: function () {
     return view('collaboration');
 });
+
+Route::get('/profile', action: function () {
+    return view('profile');
+});
+
+Route::get('/leaders', action: function () {
+    return view('leader');
+});
+
+Route::get('/projects', action: function () {
+    return view('project');
+});
+
+Route::get('/contact', action: function () {
+    return view('contact');
+});
+
+Route::get('/article', action: function () {
+    return view('article');
+});
